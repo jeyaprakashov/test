@@ -7,11 +7,11 @@ node {
     
 	stage 'call shell script'
 	println ("running the shell script")
-	sh hello.sh
+	sh "hello.sh"
 	println ("shell script completed")
 	
 	stage 'call perl script'
 	println ("running perl script")
-	perl hello.pl
+	perl "hello.pl"
 	println ("perl script completed")
 }
