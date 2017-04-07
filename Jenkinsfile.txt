@@ -1,22 +1,7 @@
 #!groovy
-pipeline {
-    node ('scsos0008108002.svl.openenglab.netapp.com'){
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
-}
+node('scsos0008108002.svl.openenglab.netapp.com') {
+    echo "Hello World"
+    stage 'Welcome Stage'
+    println ("welcome to pipeline world")
+    
 }
