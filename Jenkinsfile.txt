@@ -1,5 +1,5 @@
 #!groovy
-node('scsos0008108002.svl.openenglab.netapp.com') {
+node {
     echo "Hello World"
     stage 'Welcome Stage'
     println ("welcome to pipeline world")
