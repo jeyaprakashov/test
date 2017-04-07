@@ -5,14 +5,16 @@ node {
     stage 'Welcome Stage'
     println ("welcome to pipeline world")
     
-	stage 'call shell script'
-	println ("running the shell script")
+	stage 'call shell script'{
+	steps{
+			println ("running the shell script")
 	
-	def proc ='hello.sh'.execute()
-	proc.consumeProcessOutput(sout, serr)
-	println sout
-		println ("shell script completed")
-	
+			def proc ='sh hello.sh'.execute()
+			proc.consumeProcessOutput(sout, serr)
+			println sout
+			println ("shell script completed")
+		}
+	}
 	stage 'call perl script'
 	println ("running perl script")
 	println ("perl script completed")
