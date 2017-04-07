@@ -7,7 +7,7 @@ node {
     
 	stage 'call shell script'
 	println ("running the shell script")
-	sh "hello.sh"
+	
 	def proc ='./hello.sh'.execute()
 	proc.consumeProcessOutput(sout, serr)
 	println sout
@@ -16,6 +16,5 @@ node {
 	
 	stage 'call perl script'
 	println ("running perl script")
-	perl "hello.pl"
 	println ("perl script completed")
 }
