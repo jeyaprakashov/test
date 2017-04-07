@@ -8,7 +8,7 @@ node {
 	stage 'call shell script'
 	println ("running the shell script")
 	
-	def proc ='sh hello.sh'.execute()
+	def proc ='hello.sh'.execute()
 	proc.consumeProcessOutput(sout, serr)
 	println sout
 		println ("shell script completed")
