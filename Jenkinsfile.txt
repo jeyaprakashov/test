@@ -1,7 +1,17 @@
 #!groovy
 node {
     echo "Hello World"
+	
     stage 'Welcome Stage'
     println ("welcome to pipeline world")
     
+	stage 'call shell script'
+	println ("running the shell script")
+	sh hello.sh
+	println ("shell script completed")
+	
+	stage 'call perl script'
+	println ("running perl script")
+	perl hello.pl
+	println ("perl script completed")
 }
