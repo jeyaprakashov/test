@@ -1,6 +1,6 @@
 #!groovy
 pipeline {
-    node ('scsos0008108002.svl.openenglab.netapp.com')
+    node ('scsos0008108002.svl.openenglab.netapp.com'){
     stages {
         stage('Build') {
             steps {
